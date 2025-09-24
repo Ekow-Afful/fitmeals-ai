@@ -1,6 +1,5 @@
 import React from "react";
 import TerminalOverlay from "./TerminalOverlay";
-import UserPrograms from "./UserPrograms";
 import { Button } from "@/components/ui/button";
 import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
@@ -8,41 +7,41 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col min-h-screen text-foreground overflow-hidden">
+    <div className="flex flex-col text-foreground overflow-hidden">
       <section className="relative z-10 py-24 flex-grow">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative">
             {/* CORNER DECARATION */}
-            <div className="absolute -top-10 -left-4 w-40 h-40 border-l-2 border-t-2" />
+            <div className="absolute -top-8 -left-4 w-40 h-40 border-l-2 border-t-2" />
 
             {/* LEFT SIDE CONTENT */}
             <div className="lg:col-span-6 space-y-8 relative">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
                 <div>
-                  <span className="text-foreground">Transform</span>
+                  <span className="text-foreground">Generate</span>
                 </div>
                 <div>
-                  <span className="text-primary">Your Body</span>
+                  <span className="text-primary">Meals</span> and
                 </div>
                 <div className="pt-2">
-                  <span className="text-foreground">With Advanced</span>
+                  <span className="text-primary">Workout </span>Plans
                 </div>
                 <div className="pt-2">
-                  <span className="text-foreground">AI</span>
-                  <span className="text-primary"> Technology</span>
+                  <span className="text-foreground">Instantly with </span>
+                  <span className="text-primary">AI</span>
                 </div>
               </h1>
 
               {/* SEPERATOR LINE */}
-              <div className="h-px w-full bg-gradient-to-r from-primary via-secondary to-primary opacity-50"></div>
+              {/* <div className="h-px w-full bg-gradient-to-r from-primary via-secondary to-primary opacity-50"></div> */}
 
               <p className="text-xl text-muted-foreground w-2/3">
-                Talk to our AI assistant and get personalized diet plans and
-                workout routines designed just for you
+                Get personalized meal plans and workouts just by talking to our
+                AI
               </p>
 
               {/* STATS */}
-              <div className="flex items-center gap-10 py-6 font-mono">
+              {/* <div className="flex items-center gap-10 font-mono">
                 <div className="flex flex-col">
                   <div className="text-2xl text-primary">500+</div>
                   <div className="text-xs uppercase tracking-wider">
@@ -51,7 +50,7 @@ const Hero = () => {
                 </div>
                 <div className="h-12 w-px bg-gradient-to-b from-transparent via-border to-transparent"></div>
                 <div className="flex flex-col">
-                  <div className="text-2xl text-primary">3min</div>
+                  <div className="text-2xl text-primary">3 min</div>
                   <div className="text-xs uppercase tracking-wider">
                     GENERATION
                   </div>
@@ -63,10 +62,10 @@ const Hero = () => {
                     PERSONALIZED
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* BUTTON */}
-              <div className="flex flex-col sm:flex-row gap-4 pt-6">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   size="lg"
                   asChild
@@ -74,9 +73,9 @@ const Hero = () => {
                 >
                   <Link
                     href={"/generate-program"}
-                    className="flex items-center font-mono"
+                    className="flex items-center font-mono "
                   >
-                    Build Your Program
+                    Get Started
                     <ArrowRightIcon className="ml-2 size-5" />
                   </Link>
                 </Button>
@@ -128,8 +127,6 @@ const Hero = () => {
           </div>
         </div>
       </section>
-
-      <UserPrograms />
     </div>
   );
 };

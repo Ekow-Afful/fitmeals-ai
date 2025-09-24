@@ -30,6 +30,7 @@ export default defineSchema({
         })
       ),
     }),
+
     dietPlan: v.object({
       dailyCalories: v.number(),
       meals: v.array(

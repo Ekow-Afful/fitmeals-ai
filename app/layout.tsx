@@ -32,18 +32,17 @@ export default function RootLayout({
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
           <Navbar />
-
           {/* GRID BACKGROUND */}
           <div className="fixed inset-9 -z-10 grid grid-cols-4 grid-rows-3 gap-4 p-6">
             {Array.from({ length: 12 }).map((_, i) => (
               <div
                 key={i}
-                className="bg-background border border-[#4bcae716] rounded-lg animate-glow-cycle"
+                className="bg-background border border-[#4be77225] rounded-lg animate-glow-cycl"
                 style={{ animationDelay: `${i * 0.2}s` }}
               />
             ))}
           </div>
-          <main className="pt-12 flex-grow ">{children}</main>
+          <main className="pt-8 flex-grow ">{children}</main>
 
           <Footer />
         </body>
